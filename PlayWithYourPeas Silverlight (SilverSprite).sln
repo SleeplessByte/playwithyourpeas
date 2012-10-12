@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayWithYourPeas SilverLight Web", "PlayWithYourPeas - Using SilverSprite\PlayWithYourPeas\PlayWithYourPeas SilverLight Web.csproj", "{B384683E-2647-44D0-B424-FE7A8E90448B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Farseer Physics Silverlight", "Farseer Physics Engine 3.3.1 Silverlight 5\Farseer Physics Silverlight.csproj", "{786DC838-D746-4107-93FF-19A902A78CFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayWithYourPeasContent", "PlayWithYourPeas - Using SilverSprite\PlayWithYourPeas\Content\PlayWithYourPeasContent.contentproj", "{F28C25D4-F60A-423F-AC4B-FE145A821993}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayWithYourPeas Loader", "PlayWithYourPeas - Using SilverSprite\PlayWithYourPeasLoader\PlayWithYourPeas Loader.csproj", "{FD8ADADC-61E7-45B9-9B04-15B36F281D97}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayWithYourPeas SilverLight App", "PlayWithYourPeas - Using SilverSprite\PlayWithYourPeas\PlayWithYourPeas SilverLight App.csproj", "{4A821290-EF66-4BC8-AB6D-64939DB1A8A4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B384683E-2647-44D0-B424-FE7A8E90448B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B384683E-2647-44D0-B424-FE7A8E90448B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B384683E-2647-44D0-B424-FE7A8E90448B}.Debug|x86.Build.0 = Debug|Any CPU
+		{B384683E-2647-44D0-B424-FE7A8E90448B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B384683E-2647-44D0-B424-FE7A8E90448B}.Release|x86.ActiveCfg = Release|Any CPU
+		{B384683E-2647-44D0-B424-FE7A8E90448B}.Release|x86.Build.0 = Release|Any CPU
+		{786DC838-D746-4107-93FF-19A902A78CFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{786DC838-D746-4107-93FF-19A902A78CFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{786DC838-D746-4107-93FF-19A902A78CFC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{786DC838-D746-4107-93FF-19A902A78CFC}.Debug|x86.Build.0 = Debug|Any CPU
+		{786DC838-D746-4107-93FF-19A902A78CFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{786DC838-D746-4107-93FF-19A902A78CFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{786DC838-D746-4107-93FF-19A902A78CFC}.Release|x86.ActiveCfg = Release|Any CPU
+		{786DC838-D746-4107-93FF-19A902A78CFC}.Release|x86.Build.0 = Release|Any CPU
+		{F28C25D4-F60A-423F-AC4B-FE145A821993}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F28C25D4-F60A-423F-AC4B-FE145A821993}.Debug|x86.ActiveCfg = Debug|x86
+		{F28C25D4-F60A-423F-AC4B-FE145A821993}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F28C25D4-F60A-423F-AC4B-FE145A821993}.Release|x86.ActiveCfg = Release|x86
+		{FD8ADADC-61E7-45B9-9B04-15B36F281D97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD8ADADC-61E7-45B9-9B04-15B36F281D97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD8ADADC-61E7-45B9-9B04-15B36F281D97}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FD8ADADC-61E7-45B9-9B04-15B36F281D97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD8ADADC-61E7-45B9-9B04-15B36F281D97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD8ADADC-61E7-45B9-9B04-15B36F281D97}.Release|x86.ActiveCfg = Release|Any CPU
+		{4A821290-EF66-4BC8-AB6D-64939DB1A8A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A821290-EF66-4BC8-AB6D-64939DB1A8A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A821290-EF66-4BC8-AB6D-64939DB1A8A4}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4A821290-EF66-4BC8-AB6D-64939DB1A8A4}.Debug|x86.Build.0 = Debug|Any CPU
+		{4A821290-EF66-4BC8-AB6D-64939DB1A8A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A821290-EF66-4BC8-AB6D-64939DB1A8A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A821290-EF66-4BC8-AB6D-64939DB1A8A4}.Release|x86.ActiveCfg = Release|Any CPU
+		{4A821290-EF66-4BC8-AB6D-64939DB1A8A4}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

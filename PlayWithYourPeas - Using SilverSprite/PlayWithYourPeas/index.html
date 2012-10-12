@@ -1,0 +1,385 @@
+﻿<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta property="og:type"        content="website" /> 
+ 	<meta property="og:url"         content="http://peas.derk-jan.org/"> 
+  	<meta property="og:title"       content="Play With Your Peas" /> 
+  	<meta property="og:image"       content="http://peas.derk-jan.org/img/Identifier.png" /> 
+  	<meta property="og:description" content="Play With Your Peas - Prototype Challenge Game" />
+
+	<title>Play With Your Peas - Prototype Challenge Game</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<meta name="viewport" content="width=device-width">
+	<link href="less/style.css" rel="stylesheet">
+
+	<script src="js/libs/modernizr-2.5.3-respond-1.1.0.min.js"></script>
+</head>
+<body data-spy="scroll">
+<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+
+    <div class="navbar navbar-fixed-top" id="navbar">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="#">Play With Your Peas</a>
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#about">Game Overview</a></li>
+                        <li><a href="#ai">Navigation AI</a></li>
+                        <li><a href="#caution">Hazards</a></li>
+                        <li><a href="#blocks">Blocks</a></li>
+                        <li><a href="#development">Development</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!-- Marketing -->
+        <div class="hero-unit">
+            <h1>Feel like a Ninja?</h1>
+            <p>You have a bunch of fun loving sentient peas that like to climb tall objects and jump off 
+            of them. They think they are ninjas. You know they are suicidal.
+            Can you build a brilliant playground that delights your peas?</p>
+            
+            <p>
+                <a class="btn btn-primary btn-large" href="xna/publish.htm">Download <small>(Windows only)</small></a>
+                <a class="btn btn-large disabled" href="canvas/">Online <small>(Silverlight 5)</small></a>
+            </p>
+            
+            <p>
+	            <small>DirectX 10 or Higher and suitable Graphics Card with Pixel Shader 2+ required</small><br>
+            </p>
+        </div>
+
+        <!-- Information -->
+        <div id="information">
+            <section class="row"  id="about">
+                <div class="span5">
+                    <h2>Overview</h2>
+                    <p>If the peas land safely, they generate happy points. The more things that they bounce off of on the way down, the more points you get. 
+                    Think of a successful pea landing like scoring a combo in Tony Hawk.
+                    </p>
+                    <p><b class="label label-info">What you do:</b> Here's the trick. You can't manipulate the peas. You can only add blocks to the landscape. Add a soft landing spot 
+                    and your falling peas won't splat. Add a spring in the right spot and they'll fly up into the air.
+                    </p>
+                    <p><b class="label label-success">Score:</b> Your score is the time it takes you to reach 20 million points. If you want to simply play with your peas, go for it. 
+                    If you want to beat the high scores, you must be Elite and build your landscape with great efficiency so that you maximize your pea combos.
+                    </p>
+                </div>
+                <div class="span7">
+                    <ul class="thumbnails">
+                        <li class="span7">
+                            <!-- <a href="#popupleveldesign" data-toggle="modal" class="thumbnail"> -->
+                            <a href="#lvldesign" class="thumbnail zoom">
+                                <img src="img/LevelDesign.png" title="Build that playground!" alt="Example playground" />
+                            </a>
+                            
+                            <div id="lvldesign" class="hidden">
+                            	<img src="img/LevelDesign.png" title="Build that playground!" alt="Example playground" />
+                            </div>
+                        </li>
+                    </ul>
+
+                    <!-- First do css and so forth
+                    <div class="modal fade" id="popupleveldesign">
+                        <div class="modal-header">
+                            <button class="close" data-dismiss="modal">×</button>
+                            <h3>Build that playground!</h3>
+                        </div>
+                        <div class="modal-body">
+                            <img src="img/LevelDesign.png" alt="Example playground" />
+                            <p>Use the tools on the right to build the perfect playground for your peas</p>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="#" class="btn">Close</a>
+                        </div>
+                    </div>
+                    -->
+                </div>
+             </section>
+             
+             <section id="ai" class="row">
+                <div class="span5">
+                    <h2>Navigating the Environment</h2>
+                    <p>The peas traverse the environment in search of ledges to jump off.</p>
+                    <p><b class="label label-info">Look for a ledge:</b> After a pea is scored, it immediately looks for a nearby ledge to jump from. A ledge is only valid if the pea
+                    can jump from there, so the surrounding have to be clear (otherwise the pea can simply move further/higher). If the ledge is reachable, 
+                    the pea will calculate a path to the ledge.
+                    </p>
+
+                    <p><b class="label label-important">Calculate path to ledge:</b> When it finds the ledge, it calculates a rapid path to the ledge. The pea rather takes a higher ledge
+                    and rather a ledge that has been visited by other peas than lower ledges or (less) unvisited ledges. 
+                    </p>
+
+                    <p><b class="label label-warning">Wander:</b> If there is no ledge nearby, the peas wanders in a particular direction, slowly climbing over obstacles and working 
+                    its way up as high as possible (and they will not move down). They are not feeling like ninja's when wandering - they won't find any paths
+                    until there are new ledges. They can jump gaps of one block and climb on some block' sides.
+                    </p>
+                </div>
+                <div class="span7">
+                    <ul class="thumbnails">
+                        <li class="span4">
+                            <div class="thumbnail">
+                                <img src="img/Movement.png" title="Navigating the environment" alt="Movement chart" />
+                                <div class="caption">
+                                    <h5>Movement Chart</h5>
+                                    <p>This indicates the possible movement when navigating the environment. Some blocks influence the possible paths.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="span3">
+                            <div class="thumbnail">
+                                <img src="img/IsJumpSpot.png" title="Where will the pea jump?" alt="Jumpspot chart" />
+                                <div class="caption">
+                                    <h5>Jumpspot Chart</h5>
+                                    <p>This indicates the block states in the grid for a block to be a jumpspot (shown left placement).</p>
+                                    <p>Blocks have to be actually clear (not in transition) and a ramp can never be a jump spot.</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+             </section>
+
+             <section id="caution" class="row">
+                <div class="span5">
+                   <h2>Caution!</h2>
+                   <p><b class="label">Unhappy Jump:</b> Sometimes a pea will find himself at the highest point reachable but without (new) jumpspots - A pea will only jump
+                   one time from each jump spot - and when this happens, he will throw himself in a random direction, resulting in an unhappy jump where no points
+                   can be obtained. The pea can die and bump into other peas, so this state should be avoided.</p>
+                   <p><b class="label label-warning">Peas are not indestructible:</b> Peas can fall up to 4 blocks. When they fall more than 4 blocks they die on impact, which means less chance
+                   to score. <em>Current game mode has no other penalty. The pea simply respawns after it is offscreen.</em>. When they land on ramps, the maximum fall height is 5 blocks. 
+                   Landing on jumps and gel is always safe!</p>
+                   <p><b class="label label-important">They don't like traps:</b> If you create such a structure where a pea keeps bouncing on the same blocks, he will become unhappy
+                   and scream: Trap! The pea will lose its happy points for that jump and start wandering from the trapped position.</p>
+                   <p><b class="label label-info">Jumpspot limitations:</b> Once placed they can not be removed. The space they occupy is two blocks and here no blocks can be placed.
+                   When the flag is fully raised, the spot becomes inactive and no pea will jump from this location.</p>
+                </div>
+                <div class="span6 well">
+                    <h2>Known Bugs/Problems <small>still a prototype</small></h2>
+                    <ul>
+                        <li>Gap jump animation</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="blocks" class="row">
+                <div class="span12">
+                    <h2>Blocks</h2>
+                    <ul class="thumbnails">
+                        <li class="span2">
+                            <div class="thumbnail">
+                                <img src="img/Block-Normal.png" alt="Normal Block"/>
+                                <div class="caption">
+                                    <h5>Normal Block</h5>
+                                    <p>250 Points. Can climb sides. No other special properties.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="span2">
+                            <div class="thumbnail">
+                                <img src="img/Block-Gel.png" alt="Gel Block"/>
+                                 <div class="caption">
+                                    <h5>Gel Block</h5>
+                                    <p>175 Points. Can't climb sides. Safe landing spots.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="span2">
+                            <div class="thumbnail">
+                                <img src="img/Block-RightRamp.png" alt="Ramp Block"/>
+                                <div class="caption">
+                                    <h5>Ramp Block</h5>
+                                    <p>100 Points. Can climb straight side. Directional bounce.</p>
+                                </div>
+                            </div>
+                        </li>
+                         <li class="span2">
+                            <div class="thumbnail">
+                                <img src="img/Block-Spring.png" alt="Spring Block"/>
+                                <div class="caption">
+                                    <h5>Spring Block</h5>
+                                    <p>500 Points. Can't climb sides. Perfect restitution.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="span4">
+                            <div class="thumbnail">
+                                <img src="img/Plate.png" alt="Plate"/>
+                                <div class="caption">
+                                    <h5>Plate</h5>
+                                    <p>125 Points. Not really a block, but yields some points. 
+                                    Acts as a normal block. Can't remove the plate.</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="development" class="well">
+	            <div class="row">
+                    <h1 class="span11">
+                        Development <small>Changelog</small>
+                    </h1>
+                    
+                    <div class="span4">
+                        <h3>1.0.0.10</h3>
+                        
+                        <strong>Added:</strong>
+                        <ul>
+                            <li>Achievement screen</li>
+                            <li>Act of Caring: completed without deaths</li>
+                            <li>Act of Freedom: completed without traps</li>
+                            <li>Act of Irregularity: completed normal blocks</li>
+                            <li>Act of Racism: completed without gel</li>
+                            <li>Act of Planes: completed without ramps</li>
+                            <li>Act of Gravity: completed without springs</li>
+                            <li>Act of Planning: completed without removing blocks</li>
+                            <li>Hapiness not allowed: all peas trapped</li>
+                            <li>SessionCompletionCount</li>
+                        </ul>
+                        
+                        <strong>Fixed:</strong>
+                        <ul>
+                            <li>Flag offset</li>
+                        </ul>
+                    </div>
+
+					<div class="span4">
+                        <h3>1.0.0.9</h3>
+                        <ul>
+                            <li>Basic Menu</li>
+                            <li>Screen Management</li>
+                        </ul>
+                    </div>
+                          
+                    <div class="span4">              
+                        <h3>1.0.0.8</h3>
+                        
+                        <strong>Fixed:</strong>
+                        <ul>
+                            <li>Resizing</li>
+                        </ul>
+                     </div>	
+                </div>
+                <div class="row">
+                    <h1 class="span11">
+                        Development <small>Roadmap</small>
+                    </h1>
+                    <div class="span4">
+                        <h3>Planned features</h3>
+                        <ul>
+                            <li>Ingame Tutorial</li>
+                            <li>Highscore list</li>
+                            <li>More achievements
+                                <ul>
+                                    <li>JumpTime</li>
+                                    <li>JumpBounce</li>
+                                    <li>JumpPoints</li>
+                                    <li>SessionJumpTime</li>
+                                    <li>SessionJumpBounce</li>
+                                    <li>SessionJumpCount</li>
+                                    <li>SessionTrapCount</li>
+                                    <li>SessionDeathCount</li>
+                                    <li>AllTime</li>
+                                    <li>AllSessionCount</li>
+                                    <li>AllSessionWin</li>
+                                    <li>AllJumpTime</li>
+                                    <li>AllJumpBounce</li>
+                                    <li>AllJumpPoints</li>
+                                    <li>AllJumpCount</li>
+                                    <li>AllTrapCount</li>
+                                    <li>AllDeathCount</li>
+                                    <li>AllCompletionCount</li>
+                                </ul>
+                            </li>
+                            <li>Settins/Options
+                                <ul>
+                                    <li>Type jumpinfo</li>
+                                    <li>Type graphics</li>
+                                    <li>Default gamespeed (slow (0.8), normal (1.0), fast (1.2)</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="span4">
+                        <h3>Potential features</h3>
+                        <ul>
+                            <li>Port to Mac/Linux (using MonoGame?)</li>
+                            <li>Better pathfinding (faster)</li>
+                            <li>Game modes
+                                <ul>
+                                    <li>Classic</li>
+                                    <li>Portrait map (like on phone)</li>
+                                    <li>Permadeath (peas that die stay death)</li>
+                                    <li>Peagen (each x seconds a new pea + permadeath)</li>
+                                    <li>Arcade (limited number of blocks)</li>
+                                    <li>Speed (game speed x 3)</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="span3">
+                        <h3>Ideas</h3>
+                        <ul>
+                            <li>Port to Android/iOS (someone get me MonoTouch/Droid)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section id="source" class="well">
+                <div class="row">
+                    <h1 class="span11">
+                        Source access
+                    </h1>
+                    <div class="span6">
+                        <p>The source code of all projects will become available in due time.</p>
+                        <button class="disabled btn btn-info">Download Source</button>
+                    </div>
+                </div>
+            </section>
+             
+        </div>
+
+        <hr>
+
+        <footer>
+            <p>&copy; Derk-Jan Karrenbeld 2012. "<a href="http://www.lostgarden.com/2008/02/play-with-your-peas-game-prototyping.html" title="Lostgarden.com prototype challenge">PlayWithYourPeas</a>" art &amp; design by Daniel Cook (Lostgarden.com)</p>
+        </footer>
+
+    </div> <!-- /container -->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script>        window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+    <script src="js/fancyzoom.min.js"></script>
+    <script src="js/libs/bootstrap/transition.js"></script>
+    <script src="js/libs/bootstrap/collapse.js"></script>
+    <script src="js/libs/bootstrap/modal.js"></script>
+    <script src="js/libs/bootstrap/scrollspy.js"></script>
+
+	<script>
+	    $(document).ready(function () {
+	        $('a.zoom').fancyZoom();
+	    });</script>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

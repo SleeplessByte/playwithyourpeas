@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="PlayWithYourPeas MonoTouch">
+</Property><Property Name="Solution File" Value="C:\Users\Derk-Jan\Documents\Visual Studio 2010\Projects\PlayWithYourPeas\PlayWithYourPeas\PlayWithYourPeas\PlayWithYourPeas MonoTouch.sln">
+</Property><Property Name="Date" Value="dinsdag 1 mei 2012">
+</Property><Property Name="Time" Value="17:06:45">
+</Property></Properties><Event ErrorLevel="0" Project="PlayWithYourPeas MonoTouch" Source="PlayWithYourPeas MonoTouch.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="PlayWithYourPeas MonoTouch" Source="PlayWithYourPeas MonoTouch.csproj" Description="Converted">
+</Event><Event ErrorLevel="2" Project="" Source="PlayWithYourPeas MonoTouch.csproj" Description="The project file 'C:\Users\Derk-Jan\Documents\Visual Studio 2010\Projects\PlayWithYourPeas\PlayWithYourPeas\PlayWithYourPeas\PlayWithYourPeas MonoTouch.csproj' cannot be opened.&#xA;&#xA;The project type is not supported by this installation.">
+</Event></UpgradeLog>

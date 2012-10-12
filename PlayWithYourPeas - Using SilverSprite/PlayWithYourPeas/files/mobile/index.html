@@ -1,0 +1,111 @@
+﻿<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta property="og:type"        content="website" /> 
+ 	<meta property="og:url"         content="http://peas.derk-jan.org/mobile/"> 
+  	<meta property="og:title"       content="Play With Your Peas" /> 
+  	<meta property="og:image"       content="http://peas.derk-jan.org/img/Identifier.png" /> 
+  	<meta property="og:description" content="Play With Your Peas - Prototype Challenge Game" />
+
+	<title>Play With Your Peas - Mobile</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<meta name="viewport" content="width=device-width">
+	<link href="../../less/style.css" rel="stylesheet">
+
+	<script src="../../js/libs/modernizr-2.5.3-respond-1.1.0.min.js"></script>
+    <style>
+    
+        html, body {
+	        height: 100%;
+	        overflow: auto;
+        }
+        
+        body {
+	        padding: 0;
+	        margin: 0;
+	        background-color: Gray;
+        }
+        
+        #silverlight, #silverlightControlHost {
+	        height: 99%;
+	        text-align:center;
+	        margin: 0;
+        }
+        
+        #silverlightControlHost object {
+            width: 100%;
+            height: 99%;
+        }
+        
+        .container > .hero-unit 
+        {
+            margin-top: 20px;
+        }
+    
+    </style>
+</head>
+<body>
+<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+
+    <div id="fb-root"></div>
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '223453524434397', // App ID
+                channelUrl: '//www.derk-jan.org/files/canvas/channel.html', // Channel File
+                status: true, // check login status
+                cookie: true, // enable cookies to allow the server to access the session
+                xfbml: true  // parse XFBML
+            });
+
+            // Additional initialization code here
+            /*FB.login(function (response) {
+            if (response.authResponse) {
+            console.log('Welcome!  Fetching your information.... ');
+            FB.api('/me', function (response) {
+            console.log('Good to see you, ' + response.name + '.');
+            });
+            } else {
+            console.log('User cancelled login or did not fully authorize.');
+            }
+            });
+
+            FB.Canvas.getPageInfo(
+            function (info) {
+            console.log('Width: ' + info.clientWidth + ' Height: ' + info.clientHeight);
+            }
+            );*/
+        };
+
+        // Load the SDK Asynchronously
+        (function (d) {
+            var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+            if (d.getElementById(id)) { return; }
+            js = d.createElement('script'); js.id = id; js.async = true;
+            js.src = "//connect.facebook.net/en_US/all.js";
+            ref.parentNode.insertBefore(js, ref);
+        } (document));
+    </script>
+
+    <div class="container">
+        <!-- Marketing -->
+        <div class="hero-unit">
+            <h1>Feel like a Ninja?</h1>
+            <p>You have a bunch of fun loving sentient peas that like to climb tall objects and jump off 
+            of them. They think they are ninjas. You know they are suicidal.
+            Can you build a brilliant playground that delights your peas?</p>
+            <p>
+                <button class="btn btn-primary disabled">Not available for mobile yet</button>
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>

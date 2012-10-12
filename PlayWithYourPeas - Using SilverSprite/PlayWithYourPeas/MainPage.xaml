@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="PlayWithYourPeas.SilverLight.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Loaded="UserControl_Loaded"
+    mc:Ignorable="d"
+    d:DesignHeight="720" d:DesignWidth="1280">
+
+    <Grid x:Name="LayoutRoot" Background="Gray">
+        <!--3D drawing surface
+        <DrawingSurface x:Name="gamedraw" Draw="draw"/> 
+        <TextBlock Text="PlayWithYourPeas - Silverlight version" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,30" Foreground="White" FontSize="40"/> -->
+        <!--<WebBrowser x:Name="WebBrowserControl"></WebBrowser>-->
+    </Grid>
+</UserControl>

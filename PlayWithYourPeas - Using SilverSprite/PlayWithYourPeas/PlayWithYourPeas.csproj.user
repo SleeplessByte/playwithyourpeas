@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PublishUrlHistory>C:\Users\Derk-Jan\My Websites\root.derk-jan.org\peas\files\xna\|C:\Users\Derk-Jan\My Websites\root.derk-jan.com\peas\files\xna\</PublishUrlHistory>
+    <InstallUrlHistory>http://peas.derk-jan.com/files/xna/</InstallUrlHistory>
+    <SupportUrlHistory>http://peas.derk-jan.com</SupportUrlHistory>
+    <UpdateUrlHistory />
+    <BootstrapperUrlHistory />
+    <ErrorReportUrlHistory>http://peas.derk-jan.com</ErrorReportUrlHistory>
+    <FallbackCulture>en-US</FallbackCulture>
+    <VerifyUploadedFiles>false</VerifyUploadedFiles>
+    <ProjectView>ProjectFiles</ProjectView>
+  </PropertyGroup>
+  <PropertyGroup>
+    <EnableSecurityDebugging>false</EnableSecurityDebugging>
+  </PropertyGroup>
+</Project>

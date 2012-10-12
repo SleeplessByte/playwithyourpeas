@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayWithYourPeas XNA", "PlayWithYourPeas\PlayWithYourPeas\PlayWithYourPeas XNA.csproj", "{49715129-8823-4C8A-AC47-DDE6B22A4129}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Farseer Physics XNA", "Farseer Physics Engine 3.3.1 Samples XNA\Farseer Physics Engine 3.3 XNA\Farseer Physics XNA.csproj", "{0A850700-1ABB-4288-A391-6726B90EBEB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DebugView XNA", "Farseer Physics Engine 3.3.1 Samples XNA\DebugView XNA\DebugView XNA.csproj", "{FC7845FA-13FE-4FF8-822A-A577F3F59B00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DebugView XNA Content", "Farseer Physics Engine 3.3.1 Samples XNA\DebugView XNA\Content\DebugView XNA Content.contentproj", "{AC26EDE1-2A42-4A57-BEEE-9603FCAC9317}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExEnFontShim", "..\ExEn\ExEnFontShim\ExEnFontShim.csproj", "{BEC8D75B-1BC7-4899-B8C5-58E4B6A64AB1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayWithYourPeasContent", "PlayWithYourPeas\PlayWithYourPeas\Content\PlayWithYourPeasContent.contentproj", "{F28C25D4-F60A-423F-AC4B-FE145A821993}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{49715129-8823-4C8A-AC47-DDE6B22A4129}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{49715129-8823-4C8A-AC47-DDE6B22A4129}.Debug|x86.ActiveCfg = Debug|x86
+		{49715129-8823-4C8A-AC47-DDE6B22A4129}.Debug|x86.Build.0 = Debug|x86
+		{49715129-8823-4C8A-AC47-DDE6B22A4129}.Release|Any CPU.ActiveCfg = Release|x86
+		{49715129-8823-4C8A-AC47-DDE6B22A4129}.Release|x86.ActiveCfg = Release|x86
+		{49715129-8823-4C8A-AC47-DDE6B22A4129}.Release|x86.Build.0 = Release|x86
+		{0A850700-1ABB-4288-A391-6726B90EBEB9}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{0A850700-1ABB-4288-A391-6726B90EBEB9}.Debug|x86.ActiveCfg = Debug|x86
+		{0A850700-1ABB-4288-A391-6726B90EBEB9}.Debug|x86.Build.0 = Debug|x86
+		{0A850700-1ABB-4288-A391-6726B90EBEB9}.Release|Any CPU.ActiveCfg = Release|x86
+		{0A850700-1ABB-4288-A391-6726B90EBEB9}.Release|x86.ActiveCfg = Release|x86
+		{0A850700-1ABB-4288-A391-6726B90EBEB9}.Release|x86.Build.0 = Release|x86
+		{FC7845FA-13FE-4FF8-822A-A577F3F59B00}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{FC7845FA-13FE-4FF8-822A-A577F3F59B00}.Debug|x86.ActiveCfg = Debug|x86
+		{FC7845FA-13FE-4FF8-822A-A577F3F59B00}.Debug|x86.Build.0 = Debug|x86
+		{FC7845FA-13FE-4FF8-822A-A577F3F59B00}.Release|Any CPU.ActiveCfg = Release|x86
+		{FC7845FA-13FE-4FF8-822A-A577F3F59B00}.Release|x86.ActiveCfg = Release|x86
+		{FC7845FA-13FE-4FF8-822A-A577F3F59B00}.Release|x86.Build.0 = Release|x86
+		{AC26EDE1-2A42-4A57-BEEE-9603FCAC9317}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC26EDE1-2A42-4A57-BEEE-9603FCAC9317}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{AC26EDE1-2A42-4A57-BEEE-9603FCAC9317}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC26EDE1-2A42-4A57-BEEE-9603FCAC9317}.Release|x86.ActiveCfg = Debug|Any CPU
+		{BEC8D75B-1BC7-4899-B8C5-58E4B6A64AB1}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{BEC8D75B-1BC7-4899-B8C5-58E4B6A64AB1}.Debug|Any CPU.Build.0 = Debug|x86
+		{BEC8D75B-1BC7-4899-B8C5-58E4B6A64AB1}.Debug|x86.ActiveCfg = Debug|x86
+		{BEC8D75B-1BC7-4899-B8C5-58E4B6A64AB1}.Debug|x86.Build.0 = Debug|x86
+		{BEC8D75B-1BC7-4899-B8C5-58E4B6A64AB1}.Release|Any CPU.ActiveCfg = Debug|x86
+		{BEC8D75B-1BC7-4899-B8C5-58E4B6A64AB1}.Release|Any CPU.Build.0 = Debug|x86
+		{BEC8D75B-1BC7-4899-B8C5-58E4B6A64AB1}.Release|x86.ActiveCfg = Debug|x86
+		{BEC8D75B-1BC7-4899-B8C5-58E4B6A64AB1}.Release|x86.Build.0 = Debug|x86
+		{F28C25D4-F60A-423F-AC4B-FE145A821993}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{F28C25D4-F60A-423F-AC4B-FE145A821993}.Debug|x86.ActiveCfg = Debug|x86
+		{F28C25D4-F60A-423F-AC4B-FE145A821993}.Release|Any CPU.ActiveCfg = Release|x86
+		{F28C25D4-F60A-423F-AC4B-FE145A821993}.Release|x86.ActiveCfg = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

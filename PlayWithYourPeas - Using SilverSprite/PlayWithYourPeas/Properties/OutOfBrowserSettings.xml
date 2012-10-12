@@ -1,0 +1,12 @@
+<OutOfBrowserSettings ShortName="PlayWithYourPeas" EnableGPUAcceleration="True" ShowInstallMenuItem="True">
+  <OutOfBrowserSettings.Blurb>PlayWithYourPeas from your desktop</OutOfBrowserSettings.Blurb>
+  <OutOfBrowserSettings.WindowSettings>
+    <WindowSettings Title="PlayWithYourPeas in Silverlight" Height="720" Width="1280" />
+  </OutOfBrowserSettings.WindowSettings>
+  <OutOfBrowserSettings.Icons>
+    <Icon Size="16,16">Application/Icon16x16.png</Icon>
+    <Icon Size="32,32">Application/Icon32x32.png</Icon>
+    <Icon Size="48,48">Application/Icon48x48.png</Icon>
+    <Icon Size="128,128">Application/Icon128x128.png</Icon>
+  </OutOfBrowserSettings.Icons>
+</OutOfBrowserSettings>

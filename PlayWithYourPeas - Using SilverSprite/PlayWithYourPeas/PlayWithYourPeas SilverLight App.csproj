@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4A821290-EF66-4BC8-AB6D-64939DB1A8A4}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PlayWithYourPeas.SilverLight</RootNamespace>
+    <AssemblyName>PlayWithYourPeas.SilverLight.App</AssemblyName>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>PlayWithYourPeas.SilverLight.App.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>PlayWithYourPeas.SilverLight.App</SilverlightAppEntry>
+    <TestPageFileName>Silverlight3dAppTestPage.html</TestPageFileName>
+    <CreateTestPage>true</CreateTestPage>
+    <ValidateXaml>true</ValidateXaml>
+    <EnableOutOfBrowser>true</EnableOutOfBrowser>
+    <OutOfBrowserSettingsFile>Properties\OutOfBrowserSettings.xml</OutOfBrowserSettingsFile>
+    <UsePlatformExtensions>false</UsePlatformExtensions>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <LinkedServerProject>
+    </LinkedServerProject>
+  </PropertyGroup>
+  <!-- This property group is only here to support building this project using the 
+       MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
+       to set the TargetFrameworkVersion to v3.5 -->
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>TRACE;DEBUG;SILVERLIGHT;SILVERLIGHT5</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;SILVERLIGHT5</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Facebook">
+      <HintPath>..\..\packages\Facebook.6.0.16\lib\sl5\Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework" />
+    <Reference Include="Microsoft.Xna.Framework.Content" />
+    <Reference Include="Microsoft.Xna.Framework.Graphics" />
+    <Reference Include="Microsoft.Xna.Framework.Graphics.Extensions" />
+    <Reference Include="Microsoft.Xna.Framework.Graphics.Shaders" />
+    <Reference Include="Microsoft.Xna.Framework.Math">
+      <Aliases>global</Aliases>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Toolkit" />
+    <Reference Include="mscorlib" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\packages\Newtonsoft.Json.4.5.4\lib\sl4\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SilverSprite">
+      <HintPath>..\..\SilverSprite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations, Version=5.0.5.0, Culture=neutral, PublicKeyToken=ddd0da4d3e678217, processorArchitecture=MSIL" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.DomainServices.Client, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.ServiceModel.DomainServices.Client.Web, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.ServiceModel.Web.Extensions, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Controls, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Xna" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Windows.Browser" />
+    <Reference Include="System.Xml.Serialization, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Achievement.cs" />
+    <Compile Include="Data\BlockState.cs" />
+    <Compile Include="Data\BlockType.cs" />
+    <Compile Include="Data\DataBlock.cs" />
+    <Compile Include="Data\DataGrid.cs" />
+    <Compile Include="Data\DataJumpSpot.cs" />
+    <Compile Include="Data\DataPea.cs" />
+    <Compile Include="Data\InputControllerState.cs" />
+    <Compile Include="Data\MoveNode.cs" />
+    <Compile Include="Data\PeaControllerState.cs" />
+    <Compile Include="Data\PointsControllerState.cs" />
+    <Compile Include="Drawing\SpriteAlert.cs" />
+    <Compile Include="Drawing\SpriteBlock.cs" />
+    <Compile Include="Drawing\SpriteCloud.cs" />
+    <Compile Include="Drawing\SpriteFlag.cs" />
+    <Compile Include="Drawing\SpriteJumpInfo.cs" />
+    <Compile Include="Drawing\SpritePea.cs" />
+    <Compile Include="Drawing\SpritesetGrid.cs" />
+    <Compile Include="Drawing\SpritesetHud.cs" />
+    <Compile Include="Drawing\SpriteState.cs" />
+    <Compile Include="Drawing\SpriteToolbox.cs" />
+    <Compile Include="Engine.Drawing\BackgroundLayer.cs" />
+    <Compile Include="Engine.Drawing\Camera2D.cs" />
+    <Compile Include="Engine.Drawing\Camera3D.cs" />
+    <Compile Include="Engine.Drawing\ConvertUnits.cs" />
+    <Compile Include="Engine.Drawing\ICamera.cs" />
+    <Compile Include="Engine.Drawing\IFocusable.cs" />
+    <Compile Include="Engine.Drawing\ISceneLayer.cs" />
+    <Compile Include="Engine.Drawing\ISprite.cs" />
+    <Compile Include="Engine.Drawing\ITransitionable.cs" />
+    <Compile Include="Engine.Drawing\PositionFocus.cs" />
+    <Compile Include="Engine.Drawing\Scene.cs" />
+    <Compile Include="Engine.Drawing\SceneLayer.cs" />
+    <Compile Include="Engine.Drawing\Sprite.cs" />
+    <Compile Include="Engine.Logic\Node.cs" />
+    <Compile Include="Engine.Logic\NodeState.cs" />
+    <Compile Include="Engine.Logic\Solver.cs" />
+    <Compile Include="Engine.Logic\SolverResultEventArgs.cs" />
+    <Compile Include="Engine.Services\AudioManager.cs" />
+    <Compile Include="Engine.Services\FontCollector.cs" />
+    <Compile Include="Engine.Services\GameScreen.cs" />
+    <Compile Include="Engine.Services\InputManager.cs" />
+    <Compile Include="Engine.Services\MessageEventArgs.cs" />
+    <Compile Include="Engine.Services\PlayerProgress.cs" />
+    <Compile Include="Engine.Services\ScreenManager.cs" />
+    <Compile Include="Engine.Services\ScreenState.cs" />
+    <Compile Include="Engine.Services\Settings.cs" />
+    <Compile Include="Engine.Services\Storage\FileManager.cs" />
+    <Compile Include="Engine.Services\Storage\IAsyncStorageDevice.cs" />
+    <Compile Include="Engine.Services\Storage\IsolatedStorageStorageDevice.cs" />
+    <Compile Include="Engine.Services\Storage\IStorageDevice.cs" />
+    <Compile Include="Engine.Services\Storage\NonClosingStreamWrapper.cs" />
+    <Compile Include="Engine.Services\Storage\PlayerStorageDevice.cs" />
+    <Compile Include="Engine.Services\Storage\SerializableDictionairy.cs" />
+    <Compile Include="Engine.Services\Storage\SharedStorageDevice.cs" />
+    <Compile Include="Engine.Services\Storage\StorageDevice.cs" />
+    <Compile Include="Engine.Services\Storage\StorageDeviceAsync.cs" />
+    <Compile Include="Engine.Services\Storage\StorageDeviceEventArgs.cs" />
+    <Compile Include="Engine.Services\Storage\StorageDevicePromptEventArgs.cs" />
+    <Compile Include="Engine.Services\Storage\StorageDevicePromptEventResponse.cs" />
+    <Compile Include="Engine.Services\Storage\StorageDevicePromptState.cs" />
+    <Compile Include="Engine.Services\Storage\StorageDeviceSynchronous.cs" />
+    <Compile Include="Engine.Services\Storage\StorageOperationAsyncResult.cs" />
+    <Compile Include="Engine.Services\Storage\Strings.Designer.cs" />
+    <Compile Include="Engine.Services\Storage\TitleStorageDevice.cs" />
+    <Compile Include="Engine.Services\UnusedAttribute.cs" />
+    <Compile Include="Logic\AchievementController.cs" />
+    <Compile Include="Logic\EventHandlers.cs" />
+    <Compile Include="Logic\InputController.cs" />
+    <Compile Include="Logic\PeaController.cs" />
+    <Compile Include="Logic\PointsController.cs" />
+    <Compile Include="Logic\SocialController.cs" />
+    <Compile Include="Logic\TimeController.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PeasGame.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Screens\AchievementsPopup.cs" />
+    <Compile Include="Screens\AchievementsScreen.cs" />
+    <Compile Include="Screens\MenuScreen.cs" />
+    <Compile Include="Screens\PauseOverlay.cs" />
+    <Compile Include="Screens\PeaScreen.cs" />
+    <Compile Include="Screens\ScoreScreen.cs" />
+    <Compile Include="Screens\SettingsScreen.cs" />
+    <Compile Include="Screens\TutorialScreen.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\AppManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\OutOfBrowserSettings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Farseer Physics Engine 3.3.1 Silverlight 5\Farseer Physics Silverlight.csproj">
+      <Project>{786DC838-D746-4107-93FF-19A902A78CFC}</Project>
+      <Name>Farseer Physics Silverlight</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Application\Icon128x128.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Application\Icon16x16.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Application\Icon32x32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Application\Icon48x48.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="succes.htm" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Engine.Services\Storage\Strings.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <PropertyGroup>
+    <!-- <XnaContentProject>..\PlayWithYourPeasSilverLight\Silverlight3dAppContent\PlayWithYourPeasSilverLightAppContent.contentproj</XnaContentProject> -->
+    <XnaContentProject>Content\PlayWithYourPeasContent.contentproj</XnaContentProject>
+  </PropertyGroup>
+  <Target Name="BeforeBuild">
+    <MSBuild Projects="$(XnaContentProject)" Properties="XnaContentPipelineTargetPlatform=Windows;XnaContentPipelineTargetProfile=Reach" />
+    <CreateItem Include="$(XnaContentProject)">
+      <Output TaskParameter="Include" ItemName="XnaContentProjectItem" />
+    </CreateItem>
+    <CreateProperty Value="%(XnaContentProjectItem.RelativeDir)">
+      <Output TaskParameter="Value" PropertyName="XnaContentProjectPath" />
+    </CreateProperty>
+    <CreateItem Include="$(XnaContentProjectPath)cachefile*targetpath.txt">
+      <Output TaskParameter="Include" ItemName="XnaContentCacheFile" />
+    </CreateItem>
+    <ReadLinesFromFile File="@(XnaContentCacheFile)" Condition="Exists(@(XnaContentCacheFile))">
+      <Output TaskParameter="Lines" ItemName="XnaContentOutputs" />
+    </ReadLinesFromFile>
+    <CreateItem Include="@(XnaContentOutputs->'$(XnaContentProjectPath)bin\AnyCPU\$(Configuration)\%(Identity)')" AdditionalMetadata="Link=Content\%(RelativeDir)%(Filename)%(Extension)">
+      <Output TaskParameter="Include" ItemName="Content" />
+    </CreateItem>
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
